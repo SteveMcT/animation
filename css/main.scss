@@ -22,7 +22,17 @@ button {
 #animation {
     height: 0;
     width: 100%;
-    background: rgb(38, 153, 168);
+    background: rgb(22, 22, 22);
+    h1 {
+        text-align: center;
+        color: #dddddd;
+    }
+    img {
+        position: relative;
+        margin-top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 main {
@@ -110,4 +120,11 @@ main {
         opacity: 0;
         box-shadow: 10px 10px 4px 14px solid #ffffff3a;
     }
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%, -50%);
 }

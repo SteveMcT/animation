@@ -23,7 +23,20 @@ button:hover {
 #animation {
   height: 0;
   width: 100%;
-  background: #2699a8;
+  background: #161616;
+}
+
+#animation h1 {
+  text-align: center;
+  color: #dddddd;
+}
+
+#animation img {
+  position: relative;
+  margin-top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 main {
@@ -169,5 +182,13 @@ main div:last-child {
     -webkit-box-shadow: 10px 10px 4px 14px solid #ffffff3a;
             box-shadow: 10px 10px 4px 14px solid #ffffff3a;
   }
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%, -50%);
+          transform: translateX(-50%, -50%);
 }
 /*# sourceMappingURL=main.css.map */
