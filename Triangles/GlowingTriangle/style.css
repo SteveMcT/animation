@@ -1,0 +1,51 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #122436;
+  height: 100vh;
+}
+
+.shadow {
+  -webkit-filter: drop-shadow(10px 10px 200px #ff00ff) drop-shadow(-10px -10px 50px #ff00ff);
+          filter: drop-shadow(10px 10px 200px #ff00ff) drop-shadow(-10px -10px 50px #ff00ff);
+}
+
+.triangle-wrapper {
+  width: 30vw;
+  height: calc(30vw / (1 / 1));
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: #ff00ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.triangle {
+  width: calc(30vw - 30px);
+  height: calc(30vw - 30px);
+  background-color: #122436;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  margin-top: 10px;
+  -webkit-filter: blur(115px) drop-shadow(-10px -10px 75px #ff00ff);
+          filter: blur(115px) drop-shadow(-10px -10px 75px #ff00ff);
+}
+
+.triangle p {
+  color: #FFF;
+}
+/*# sourceMappingURL=style.css.map */

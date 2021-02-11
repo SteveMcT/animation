@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+body,
+html {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+button {
+    outline: none;
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#animation {
+    height: 0;
+    width: 100%;
+    background: rgb(38, 153, 168);
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    transition: .8s;
+    #start {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate3d(2, -1, -1, -0.18turn);
+        color: #fff;
+        background: transparent;
+        border: 3px solid #fff;
+        border-radius: 2px;
+        font-size: 38px;
+        padding: 24px 84px;
+        transition: .4s;
+        font-weight: 500;
+        z-index: 4;
+        &:hover {
+            box-shadow: inset 0 0 0 50px #fff;
+            color: #000;
+            top: 45%;
+            animation: slideup 3s ease-in-out;
+        }
+        &:focus {
+            animation: vanish .3s ease-in-out;
+        }
+    }
+    div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate3d(2, -1, -1, -0.18turn);
+        height: 96px;
+        width: 254px;
+        border: 30px solid #ffffff3a;
+        &:first-child {
+            animation: moveup .9s linear infinite;
+        }
+        &:nth-child(2) {
+            animation: moveup .9s linear .3s infinite;
+        }
+        &:nth-child(3) {
+            animation: moveup .9s linear .6s infinite;
+        }
+        &:last-child {
+            animation: moveup .9s linear .9s infinite;
+        }
+    }
+}
+
+@keyframes slideup {
+    from {
+        top: 50%;
+    }
+    to {
+        top: 45%;
+    }
+}
+
+@keyframes vanish {
+    from {
+        top: 50%;
+    }
+    to {
+        top: 220%;
+        display: none;
+    }
+}
+
+@keyframes moveup {
+    0% {
+        top: 50%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        box-shadow: 1px 1px 4px 4px solid #ffffff3a;
+    }
+    100% {
+        top: 45%;
+        opacity: 0;
+        box-shadow: 10px 10px 4px 14px solid #ffffff3a;
+    }
+}
