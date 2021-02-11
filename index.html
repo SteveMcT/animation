@@ -11,12 +11,11 @@
     <script src="js/main.js"></script>
 
     <link rel="stylesheet" href="css/main.css">
-
 </head>
 
 <body>
     <main id="startContent">
-        <button onfocus="displayNone('#start', 300); hidemain()" id="start">Start</button>
+        <button onclick="hideItem('#start', 300); hidemain()" id="start">Start</button>
         <div class="vanish"></div>
         <div class="vanish"></div>
         <div class="vanish"></div>
@@ -24,8 +23,7 @@
     </main>
 
     <div id="animation">
-        <h1>KEKW</h1>
-        <img src="img/kekw.jpg" alt="">
+        <button onclick="displayItem('#start', 300); showmain()" id="end">Show</button>
     </div>
 
 

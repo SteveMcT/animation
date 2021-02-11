@@ -23,7 +23,10 @@ button:hover {
 #animation {
   height: 0;
   width: 100%;
+  overflow: hidden;
   background: #161616;
+  -webkit-transition: .8s;
+  transition: .8s;
 }
 
 #animation h1 {
@@ -37,6 +40,29 @@ button:hover {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+#animation #end {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+  background: transparent;
+  padding: 30px 150px;
+  font-size: 28px;
+  border: 3px solid white;
+  color: #fff;
+  border-radius: 50px;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+#animation #end:hover {
+  color: #000;
+  -webkit-box-shadow: inset 0 0 0 100px #fff;
+          box-shadow: inset 0 0 0 100px #fff;
 }
 
 main {
@@ -70,13 +96,8 @@ main #start:hover {
           box-shadow: inset 0 0 0 50px #fff;
   color: #000;
   top: 45%;
-  -webkit-animation: slideup 3s ease-in-out;
-          animation: slideup 3s ease-in-out;
-}
-
-main #start:focus {
-  -webkit-animation: vanish .3s ease-in-out;
-          animation: vanish .3s ease-in-out;
+  -webkit-animation: slideup 2s ease-in-out;
+          animation: slideup 2s ease-in-out;
 }
 
 main div {
@@ -91,23 +112,23 @@ main div {
 }
 
 main div:first-child {
-  -webkit-animation: moveup .9s linear infinite;
-          animation: moveup .9s linear infinite;
+  -webkit-animation: moveup 1.5s linear infinite;
+          animation: moveup 1.5s linear infinite;
 }
 
 main div:nth-child(2) {
-  -webkit-animation: moveup .9s linear .3s infinite;
-          animation: moveup .9s linear .3s infinite;
+  -webkit-animation: moveup 1.5s linear .5s infinite;
+          animation: moveup 1.5s linear .5s infinite;
 }
 
 main div:nth-child(3) {
-  -webkit-animation: moveup .9s linear .6s infinite;
-          animation: moveup .9s linear .6s infinite;
+  -webkit-animation: moveup 1.5s linear 1s infinite;
+          animation: moveup 1.5s linear 1s infinite;
 }
 
 main div:last-child {
-  -webkit-animation: moveup .9s linear .9s infinite;
-          animation: moveup .9s linear .9s infinite;
+  -webkit-animation: moveup 1.5s linear 1.5s infinite;
+          animation: moveup 1.5s linear 1.5s infinite;
 }
 
 @-webkit-keyframes slideup {
@@ -128,26 +149,6 @@ main div:last-child {
   }
 }
 
-@-webkit-keyframes vanish {
-  from {
-    top: 50%;
-  }
-  to {
-    top: 220%;
-    display: none;
-  }
-}
-
-@keyframes vanish {
-  from {
-    top: 50%;
-  }
-  to {
-    top: 220%;
-    display: none;
-  }
-}
-
 @-webkit-keyframes moveup {
   0% {
     top: 50%;
@@ -155,14 +156,10 @@ main div:last-child {
   }
   50% {
     opacity: 1;
-    -webkit-box-shadow: 1px 1px 4px 4px solid #ffffff3a;
-            box-shadow: 1px 1px 4px 4px solid #ffffff3a;
   }
   100% {
     top: 45%;
     opacity: 0;
-    -webkit-box-shadow: 10px 10px 4px 14px solid #ffffff3a;
-            box-shadow: 10px 10px 4px 14px solid #ffffff3a;
   }
 }
 
@@ -173,22 +170,10 @@ main div:last-child {
   }
   50% {
     opacity: 1;
-    -webkit-box-shadow: 1px 1px 4px 4px solid #ffffff3a;
-            box-shadow: 1px 1px 4px 4px solid #ffffff3a;
   }
   100% {
     top: 45%;
     opacity: 0;
-    -webkit-box-shadow: 10px 10px 4px 14px solid #ffffff3a;
-            box-shadow: 10px 10px 4px 14px solid #ffffff3a;
   }
-}
-
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%, -50%);
-          transform: translateX(-50%, -50%);
 }
 /*# sourceMappingURL=main.css.map */
