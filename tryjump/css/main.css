@@ -25,16 +25,17 @@ button:hover {
 .container {
   width: 300px;
   height: 300px;
-  -webkit-perspective: 500px;
-          perspective: 500px;
+  -webkit-perspective: 600px;
+          perspective: 600px;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -70%);
+          transform: translate(-50%, -70%);
 }
 
 .container .cube {
+  z-index: 2;
   position: relative;
   width: 300px;
   height: 300px;
@@ -92,8 +93,23 @@ button:hover {
 }
 
 .container .top {
+  display: block;
   -webkit-transform: translateY(-150px) rotateX(90deg);
           transform: translateY(-150px) rotateX(90deg);
+  text-align: center;
+}
+
+.container .top h1 {
+  padding: 30px;
+}
+
+.container .top p {
+  padding: 30px;
+}
+
+.container .top p:last-child {
+  padding: 15px;
+  color: #c2c2c2;
 }
 
 .container .bottom {
@@ -113,8 +129,8 @@ button:hover {
   color: #fff;
   border: 2px solid #fff;
   border-radius: 20px;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .container #download:hover {
@@ -125,7 +141,7 @@ button:hover {
 
 #btngroup {
   position: absolute;
-  top: 86%;
+  top: 80%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -135,17 +151,34 @@ button:hover {
 }
 
 #btngroup button {
+  max-width: 40px;
+  max-height: 36px;
+  overflow: hidden;
   margin: 0 10px;
-  padding: 10px 15px;
+  padding: 10px 16px;
   color: #fff;
   background: #000;
-  border-radius: 50%;
-  -webkit-transition: .4s;
-  transition: .4s;
+  border-radius: 50px;
+  -webkit-transition: all .8s;
+  transition: all .8s;
 }
 
 #btngroup button:active {
   background: #252525;
+}
+
+#btngroup button:hover {
+  max-width: 400px;
+}
+
+#btngroup button:hover p {
+  opacity: 1;
+}
+
+#btngroup button p {
+  margin-left: 10px;
+  display: inline;
+  opacity: 0;
 }
 
 @-webkit-keyframes turn {
