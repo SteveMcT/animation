@@ -9,7 +9,7 @@ html {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background: #1b1b1b;
+  background: #000;
 }
 
 button {
@@ -125,24 +125,27 @@ button:hover {
 
 #btngroup {
   position: absolute;
-  top: 82%;
+  top: 86%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  background: #161616;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 #btngroup button {
   margin: 0 10px;
   padding: 10px 15px;
-  color: #000;
-  background: #fff;
+  color: #fff;
+  background: #000;
   border-radius: 50%;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 #btngroup button:active {
-  background: #dbdbdb;
+  background: #252525;
 }
 
 @-webkit-keyframes turn {
