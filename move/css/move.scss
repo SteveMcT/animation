@@ -1,0 +1,53 @@
+body,
+html {
+    background: #e6e6e6;
+    overflow-x: hidden;
+    font-family: 'Arial', Helvetica;
+}
+
+h1 {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12em;
+    z-index: 2;
+}
+
+#grids {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden !important;
+    background: #e6e6e6;
+    .rect {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgb(97, 0, 0);
+        height: 400px;
+        width: 300px;
+        box-shadow: 0px 0px 28px 10px rgba(0, 0, 0, 0.75);
+    }
+}
+
+#someText {
+    height: 10%;
+    width: 100%;
+    background: #c39b77;
+    p {
+        padding: 20px;
+        font-size: 1.8em;
+        text-align: center;
+    }
+    &::before {
+        content: '';
+        position: relative;
+        display: block;
+        height: 20px;
+        width: 100vw;
+        background: rgb(24, 18, 18);
+    }
+}
