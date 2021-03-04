@@ -29,7 +29,6 @@ html {
           transform: translate(-50%, -50%);
   height: 200px;
   width: 200px;
-  background: #fff;
   border-radius: 50%;
 }
 
@@ -41,6 +40,14 @@ html {
 #circle-wrapper .circle:nth-child(2) {
   -webkit-animation: moveright 4s ease-in-out infinite;
           animation: moveright 4s ease-in-out infinite;
+}
+
+#circle-wrapper #a {
+  background: #ffffff;
+}
+
+#circle-wrapper #b {
+  background: #ce0b0b;
 }
 
 @-webkit-keyframes moveleft {
